@@ -11,7 +11,7 @@
 node_modules
 
 # build
-main.js
+#main.js
 main.test.js
 *.js.map
 
