@@ -78,7 +78,7 @@ export class MultiSuggesterModal<T> extends Modal {
                 }
             }
         );
-        this.contentEl.addEventListener(
+        this.modalEl.addEventListener(
             "keydown",
             (evt: KeyboardEvent) => {
                 switch (evt.key) {
