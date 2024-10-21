@@ -78,7 +78,7 @@ export class MultiSuggesterModal<T> extends Modal {
                 }
             }
         );
-
+        this.textInput.inputEl.addEventListener('blur', (e) => { e.target.focus() } )
         this.textInput.onChange(() => this.renderSuggestions());
         this.renderSuggestions();
     }
@@ -96,7 +96,6 @@ export class MultiSuggesterModal<T> extends Modal {
         this.selectedItems.add(value);
         this.addChip(value);
         this.textInput.setValue("");
-        this.textInput.focus();
         this.renderSuggestions();
     }
 
