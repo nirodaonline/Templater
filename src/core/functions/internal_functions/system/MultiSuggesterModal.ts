@@ -78,6 +78,17 @@ export class MultiSuggesterModal<T> extends Modal {
                 }
             }
         );
+        this.contentEl.addEventListener(
+            "keydown",
+            (evt: KeyboardEvent) => {
+                switch (evt.key) {
+                    case "Enter":
+                        this.submitted = true;
+                        this.close();
+                        break;
+                }
+            }
+        );
 
         this.textInput.onChange(() => this.renderSuggestions());
         this.renderSuggestions();
